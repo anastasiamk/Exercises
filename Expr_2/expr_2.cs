@@ -1,4 +1,9 @@
-﻿using System;
+﻿/* 
+ * Ulearn 1
+ * Expr2. Задается натуральное трехзначное число (гарантируется, что трехзначное).
+ * Развернуть его, т.е. получить трехзначное число, записанное теми же цифрами в обратном порядке.
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
