@@ -2,6 +2,9 @@
  * Ulearn 1
  * Expr3. Задано время Н часов (ровно). Вычислить угол в градусах между часовой и минутной стрелками. 
  * Например, 5 часов -> 150 градусов, 20 часов -> 120 градусов. Не использовать циклы.
+ * 
+ * https://ulearn.me/course/basicprogramming/Zadachi_na_seminar_aef25d82-818b-4a50-a2f0-bba842eeeedc
+ * 
  */
 
 using System;

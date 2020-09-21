@@ -2,6 +2,9 @@
  * Ulearn 1
  * Expr2. Задается натуральное трехзначное число (гарантируется, что трехзначное).
  * Развернуть его, т.е. получить трехзначное число, записанное теми же цифрами в обратном порядке.
+ * 
+ * https://ulearn.me/course/basicprogramming/Zadachi_na_seminar_aef25d82-818b-4a50-a2f0-bba842eeeedc
+ *
  */
 using System;
 using System.Collections.Generic;
