@@ -10,6 +10,8 @@ namespace Expr_2
     {
         static void Main(string[] args)
         {
+        //что за задача? не помню
+        
             string a = Console.ReadLine();
             char[] array = a.ToCharArray();
 
