@@ -31,6 +31,7 @@ namespace Ex4._1
                 y = x * x;
 
             }
+            //проверка х>2 лишняя
             else if (x > 2)
             {
                 y = 4;
