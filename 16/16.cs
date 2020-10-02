@@ -24,13 +24,17 @@ namespace _16
             int n = int.Parse(Console.ReadLine()); //n строк ввода
             for (int i = 1; i <= n; i++)
             {
-                if (i % 2 != 0)
+                for (int k = 1; k <= n; k++)
                 {
-                    Console.Write("* * * *   *");
-                }
-                else
-                {
-                    Console.Write(" * * *   * *");
+                    if (i % 2 != 0)
+                    {
+                        Console.Write("* ");
+                    }
+                    else
+                    {
+
+                        Console.Write(" *");
+                    }
                 }
                 Console.WriteLine();
             }
