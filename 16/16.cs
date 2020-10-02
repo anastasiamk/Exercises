@@ -26,6 +26,7 @@ namespace _16
             {
                 for (int k = 1; k <= n; k++)
                 {
+<<<<<<< HEAD
                     if (i % 2 != 0)
                     {
                         Console.Write("* ");
@@ -35,6 +36,15 @@ namespace _16
 
                         Console.Write(" *");
                     }
+=======
+                //В каждой строке должно быть N звездочек. 
+                //Каждая четная строка сдвинута на один пробел правее нечетной.
+                    Console.Write("* * * *   *");
+                }
+                else
+                {
+                    Console.Write(" * * *   * *");
+>>>>>>> cb636a467303bc8e9546a7c529c2d1f26753d11d
                 }
                 Console.WriteLine();
             }
