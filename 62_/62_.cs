@@ -68,6 +68,46 @@ namespace _62_
             return res;
 
         }
+        public static Matrix2x2 operator -(Matrix2x2 a, Matrix2x2 b)
+        {
+
+            Matrix2x2 res = new Matrix2x2();
+            for (int i = 0; i < res.m.GetLength(0); i++)
+                for (int j = 0; j < res.m.GetLength(1); j++)
+                    res.m[i, j] = a.m[i, j] - b.m[i, j];
+            return res;
+        }
+        public static Matrix2x2 operator *(Matrix2x2 a, double d)
+        {
+            Matrix2x2 res = new Matrix2x2();
+            res.m[0, 0] = a.m[0, 0] * d;
+            res.m[0, 1] = a.m[0, 1] * d;
+            res.m[1, 0] = a.m[1, 0] * d;
+            res.m[1, 1] = a.m[1, 1] * d;
+            return res;
+        }
+        public static Matrix2x2 operator /(Matrix2x2 a, double d)
+        {
+            Matrix2x2 res = new Matrix2x2();
+            res.m[0, 0] = a.m[0, 0] / d;
+            res.m[0, 1] = a.m[0, 1] / d;
+            res.m[1, 0] = a.m[1, 0] / d;
+            res.m[1, 1] = a.m[1, 1] / d;
+            return res;
+        }
+        public static bool operator ==(Matrix2x2 a, Matrix2x2 b) {
+            bool f = true;
+            if (a.m[0, 0] != b.m[0, 0] || a.m[0, 1] != b.m[0, 1] || a.m[1, 0] != b.m[1, 0] || a.m[1, 1] != b.m[1, 1])
+                f = false;
+            return f;
+        }
+        public static bool operator !=(Matrix2x2 a, Matrix2x2 b)
+        {
+            bool f = true;
+            if (a.m[0, 0] == b.m[0, 0] || a.m[0, 1] == b.m[0, 1] || a.m[1, 0] == b.m[1, 0] || a.m[1, 1] == b.m[1, 1])
+                f = false;
+            return f;
+        }
 
         public void add2(Matrix2x2 b)
         {
