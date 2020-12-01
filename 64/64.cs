@@ -39,7 +39,7 @@ namespace _64
         public static Vector2D operator -(Vector2D vector, Vector2D w)
         { return new Vector2D(w.x + vector.x, w.y + vector.y); }
 
-
+        //не хватает операторов
 
     }
     class Program
