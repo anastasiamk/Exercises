@@ -77,6 +77,11 @@ namespace _62_
                     res.m[i, j] = a.m[i, j] - b.m[i, j];
             return res;
         }
+        //если есть перегрузка 
+        // public static Matrix2x2 operator *(Matrix2x2 a, double d),
+        //то следует перегрузить 
+        // public static Matrix2x2 operator *( double d, Matrix2x2 a),
+        //иначе можно a*d, а d*a - нельзя
         public static Matrix2x2 operator *(Matrix2x2 a, double d)
         {
             Matrix2x2 res = new Matrix2x2();
