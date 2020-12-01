@@ -23,7 +23,7 @@ namespace _63_
     class ComplexNumber
     {
         double re, im;
-        public double Re { get; }
+        public double Re { get; } //это автосвойство, для него автоматически создаться соответствуещее private поле, тогда получится два поля для хранения вещественной части, не связанных друг с другом.
         public double Im { get; }
 
         public ComplexNumber(double re, double im) { this.re = re; this.im = im; }
@@ -34,6 +34,7 @@ namespace _63_
         {
             return new ComplexNumber(z.re + b.re, z.im + b.im);
         }
+        //z+d можно делать, a d*z - нельзя
         public static ComplexNumber operator +(ComplexNumber z, double d)
         {
             return new ComplexNumber(z.re + d, z.im);
