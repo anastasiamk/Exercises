@@ -57,10 +57,7 @@ namespace contr_work_3
             balans = 0;
             vladelec = new Person();
         }
-        //public BankAccount(int numch)
-        //{
-        //    numchet = numch;
-        //}
+        
         public BankAccount(double bal)
         {
             balans = bal;
@@ -80,16 +77,18 @@ namespace contr_work_3
             balans += sum;
             BankTransactio transactio = new BankTransactio();
             l.Add(transactio.dt);
+            AlarmEven?.Invoke("происходит пополнение счета на " + sum + "руюлей");
 
         }
         // списание средств со счета
-        public void Take(int sum)
+        public virtual void Take(int sum)
         {
             if (balans >= sum)
             {
                 balans -= sum;
                 BankTransactio transactio = new BankTransactio();
                 l.Add(transactio.dt);
+                AlarmEven?.Invoke("происходит списание с счета в размере " + sum + "рублей");
             }
         }
         //перевод с одного счета на другой
@@ -138,12 +137,24 @@ namespace contr_work_3
                 return true;
             }
         }
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
 
         public void Print()
         {
             Console.WriteLine($"Numchet = {Numchet}, Balans = {Balans}, Vladelec = {Vladelec}");
 
         }
+
+        public delegate void DeligateAlarm(string mess);
+        public event DeligateAlarm AlarmEven;
+        
 
     }
     public interface IPrint
